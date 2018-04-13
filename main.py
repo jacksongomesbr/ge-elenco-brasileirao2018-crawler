@@ -17,9 +17,11 @@ for team_detail in team_details:
     title = team_detail.select_one('.team-about-title').text
     description = team_detail.select_one('.team-about-description').text
     big_value = team_detail.select_one('.big-value').text
+    team_shield_image = team_detail.select_one('.team-shield-image').attrs['src']
     if team_id not in teams:
         teams[team_id] = {
             'name': title,
+            'shield_image_url': team_shield_image,
             'description': description,
             'value': big_value,
             'players': {},
@@ -65,12 +67,12 @@ with open('players_positions.csv', 'w', encoding='utf-8') as f:
         f.write('"{}","{}"\n'.format(id, label))
 
 with open('teams.csv', 'w', encoding='utf-8') as f:
-    headers = ['id','name','description']
+    headers = ['id', 'name', 'shield_image_url', 'description']
     for id in evaluation_criterion:
         headers.append('stats_{}'.format(id))
     f.write(','.join(['"{}"'.format(h) for h in headers]) + '\n')
     for team in teams:
-        line = [team, teams[team]['name'], teams[team]['description']]
+        line = [team, teams[team]['name'], teams[team]['shield_image_url'], teams[team]['description']]
         for id in evaluation_criterion:
             line.append(teams[team]['stats'][id])
         f.write(','.join(['"{}"'.format(item) for item in line]) + '\n')
@@ -79,4 +81,5 @@ with open('players_evaluations.csv', 'w', encoding='utf-8') as f:
     f.write('"team","id","name","photo_url","position","evaluation"\n')
     for team in teams:
         for id, player in teams[team]['players'].items():
-            f.write('"{}","{}","{}","{}","{}","{}"\n'.format(team, id, player['name'], player['photo'], player['position_code'], player['criteria_id']))
+            f.write('"{}","{}","{}","{}","{}","{}"\n'.format(team, id, player['name'], player['photo'],
+                                                             player['position_code'], player['criteria_id']))

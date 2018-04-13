@@ -26,7 +26,7 @@ Ao ser executado o programa `main.py` gera quatro arquivos na pasta local:
 
 * `evaluation_criterion.csv`: armazena os critérios de avaliação; colunas: `id`, `label`
 * `players_positions.csv`: armazena as posições dos jogadores; colunas: `id`, `label`
-* `teams.csv`: armazena dados dos times; colunas: `id`, `name`, `description`, `stats_1`, `stats_2`, `stats_3`, `stats_4`, `stats_5`, `stats_6` (cada coluna `stats_n` representa a quantidade de jogadores do critério `n`)
+* `teams.csv`: armazena dados dos times; colunas: `id`, `name`, `shield_image_url`, `description`, `stats_1`, `stats_2`, `stats_3`, `stats_4`, `stats_5`, `stats_6` (cada coluna `stats_n` representa a quantidade de jogadores do critério `n`)
 * `players_evaluations.csv`: armazena dados de avaliações dos jogadores; colunas: `team`, `id`, `name`, `photo_url`, `position`, `evaluation`
 
 Este repositório já inclui estes arquivos (gerados em 13/04/2018 por volta de 01:00:00, horário de Brasília).
