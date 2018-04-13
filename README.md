@@ -7,14 +7,14 @@ Segundo descrição da própria publicação:
 
 > O Brasileirão está começando, e o GloboEsporte.com volta a avaliar os principais jogadores dos 20 clubes da elite. Vale lembrar que o momento vivido pelo atleta conta na hora de escolher seu status.
 
-Este trabalho resultou em uma avaliação (pontuação) de 23 jogadores de cada um dos times conforme as categorias:
+Este trabalho resultou em uma avaliação (pontuação) de 23 jogadores de cada um dos times conforme as categorias (critérios):
 
-* É craque (6 pontos)
-* Joga muito (4 pontos)
-* Agrega valor (3 pontos)
-* Compõem elenco (2 pontos)
-* Sujeito a vaias (1 ponto)
-* Irrita a torcida (não pontua)
+* `1`: É craque (6 pontos)
+* `2`: Joga muito (4 pontos)
+* `3`: Agrega valor (3 pontos)
+* `4`: Compõe elenco (2 pontos)
+* `5`: Sujeito a vaias (1 ponto)
+* `6`: Irrita a torcida (não pontua)
 
 A partir disso foi criado um ranking dos times. Neste momento (13/04/2018) o Palmeiras é o time com maior pontuação (79) e o Paraná, com a menor (40).
 
