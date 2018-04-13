@@ -67,12 +67,13 @@ with open('players_positions.csv', 'w', encoding='utf-8') as f:
         f.write('"{}","{}"\n'.format(id, label))
 
 with open('teams.csv', 'w', encoding='utf-8') as f:
-    headers = ['id', 'name', 'shield_image_url', 'description']
+    headers = ['id', 'name', 'shield_image_url', 'description', 'value']
     for id in evaluation_criterion:
         headers.append('stats_{}'.format(id))
     f.write(','.join(['"{}"'.format(h) for h in headers]) + '\n')
     for team in teams:
-        line = [team, teams[team]['name'], teams[team]['shield_image_url'], teams[team]['description']]
+        line = [team, teams[team]['name'], teams[team]['shield_image_url'], teams[team]['description'],
+                teams[team]['value']]
         for id in evaluation_criterion:
             line.append(teams[team]['stats'][id])
         f.write(','.join(['"{}"'.format(item) for item in line]) + '\n')
